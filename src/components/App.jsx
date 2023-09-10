@@ -42,7 +42,7 @@ const countPositiveFeedbackPercentage = () => {
     <>
     <GlobalStyle />
     <Section title="Please leave feedback">
-      <FeedbackOptions options={['Good', 'Neutral', 'Bad']} onLeaveFeedback={clickXHandler}></FeedbackOptions>
+      <FeedbackOptions options={Object.keys({ good, neutral, bad })} onLeaveFeedback={clickXHandler}></FeedbackOptions>
     </Section>
     <Section title="Statistics">
       {countTotalFeedback() > 0 ? (
